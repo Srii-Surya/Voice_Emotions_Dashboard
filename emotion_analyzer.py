@@ -11,7 +11,7 @@ def split_audio(file_path, chunk_duration=5):
 
     for i in range(0, len(audio), chunk_duration * 1000):
         chunk = audio[i:i + chunk_duration * 1000]
-        chunks.append((chunk, i / 1000))  # seconds
+        chunks.append((chunk, i / 1000))
 
     return chunks
 
@@ -50,6 +50,7 @@ def analyze_audio(file_path):
             pass
 
         finally:
-            os.remove(temp_path)
+            if os.path.exists(temp_path):
+                os.remove(temp_path)
 
     return timeline
