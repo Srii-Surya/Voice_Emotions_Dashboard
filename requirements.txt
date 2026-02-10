@@ -1,8 +1,7 @@
 streamlit
+speechrecognition
+textblob
 librosa
 numpy
-pandas
-matplotlib
-speechrecognition
 pydub
-textblob
+matplotlib
